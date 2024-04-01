@@ -24,4 +24,6 @@ const newString2 = "   Shyam   "
 
 // Deleting extra space.
 
+ /* task for adding more Prortype model by help of Chrome or Mdn-Webdocs   */
+
 
