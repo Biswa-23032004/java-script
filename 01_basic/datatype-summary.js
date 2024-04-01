@@ -47,3 +47,29 @@ const myFunction = function(){
 }
 
 console.log(typeof anotherId);
+
+
+// Stack = "Primitive"    
+
+let book1="Physics"
+
+let book2=book1
+book2="Chemistry"
+
+console.log(book1);
+console.log(book2);
+
+// Heap = "Non primitive"
+
+let Person1={
+    email:"hari@gmail.com",
+    upi:"hari@ybl"
+}
+
+let Person2=Person1
+Person2.email="sakhi@gmail.com",
+
+
+console.log(Person1.email);
+console.log(Person2.email);
+
