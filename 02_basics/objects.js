@@ -1,6 +1,6 @@
 
-// Object.creat   this method called constructer method or singleton
-//  const body= {}  --->this is object
+// Object.creat  ---> this method called constructer method or singleton
+//  const body= {}  --->this is non singleton object
 
 // when declaring a Symbol is [newSym]
 const newSym =Symbol("Synch")
