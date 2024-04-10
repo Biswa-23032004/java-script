@@ -15,12 +15,28 @@ const users = {
 }
 
 // when we access the Object in this Way
-console.log(users.fullName)
+/* console.log(users.fullName) */
 
 //another way is
-console.log(users["fullName"])
+/* console.log(users["fullName"]) */
  
 // access a symbol
-console.log(users[newSym])
+/* console.log(users[newSym]) */
+
+users.name = "Bunty"
+/* Object.freeze(users)  */   // freeze the object
+users.name = "krsna"
+// console.log(users);
+
+// discusing functions
+users.greeting = function(){
+    console.log("see Taht code");
+}
+users.greetingtow = function(){
+    console.log(`see That code, ${this.age}`);
+}
+
+console.log(users.greeting());
+console.log(users.greetingtow());
 
 
