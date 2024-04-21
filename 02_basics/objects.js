@@ -1,6 +1,8 @@
 
 // Object.creat  ---> this method called constructer method or singleton
 //  const body= {}  --->this is non singleton object
+ 
+//------------Object Literal Method----------->
 
 // when declaring a Symbol is [newSym]
 const newSym =Symbol("Synch")
@@ -36,7 +38,30 @@ users.greetingtow = function(){
     console.log(`see That code, ${this.age}`);
 }
 
-console.log(users.greeting());
-console.log(users.greetingtow());
+// console.log(users.greeting());
+// console.log(users.greetingtow());
 
+// <----------object singleton Method----------->
+ 
+// const instauser = new object()
+//  singleton object
 
+const instauser = {}
+// Non singleton object
+
+instauser.id ="qwerty1234"
+instauser.name ="qwerty"
+instauser.isloggedIn = false
+
+console.log(instauser);
+
+// object under Object
+
+const commonMan = {
+    behaviour:{
+        education:{
+            Graduate:"yes",
+            dependent:"No"
+        }
+    }
+}
