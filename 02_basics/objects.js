@@ -53,7 +53,7 @@ instauser.id ="qwerty1234"
 instauser.name ="qwerty"
 instauser.isloggedIn = false
 
-console.log(instauser);
+// console.log(instauser);
 
 // object under Object
 
@@ -65,3 +65,26 @@ const commonMan = {
         }
     }
 }
+ 
+//Nesting the value use =.object
+
+//commbaining the object
+
+const obj1 ={1: "q", 2: "w", 3: "e"}
+const obj2 ={4: "r", 5: "t", 6: "y"}
+
+// const obj3 ={ obj1, obj2}
+// const obj3 = Object.assign({}, obj1, obj2)
+
+const obj3 = {...obj1, ...obj2}
+// console.log(obj3);
+
+
+console.log(instauser);
+
+console.log(Object.keys(instauser));
+console.log(Object.values(instauser));
+console.log(Object.entries(instauser));
+
+console.log(instauser.hasOwnProperty('id'));
+
