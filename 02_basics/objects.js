@@ -80,11 +80,43 @@ const obj3 = {...obj1, ...obj2}
 // console.log(obj3);
 
 
-console.log(instauser);
+// console.log(instauser);
 
-console.log(Object.keys(instauser));
-console.log(Object.values(instauser));
-console.log(Object.entries(instauser));
+// console.log(Object.keys(instauser));
+// console.log(Object.values(instauser));
+// console.log(Object.entries(instauser));
 
-console.log(instauser.hasOwnProperty('id'));
+// console.log(instauser.hasOwnProperty('id'));
 
+//------>Object de-structure.
+
+const shop = {
+    verities: "friuts",
+    price: "99/-",
+    shopOwner: "Master"
+
+}
+
+const {shopOwner:Owner} = shop
+
+// console.log(shopOwner);
+console.log(Owner);
+
+// --------->API JSON Concept
+
+// ex like Object
+
+// {
+//     "name":"Sunil",
+//     "education":"Graduate",
+//     "skill":"Analyst"
+
+// }
+
+// example like Array
+
+// [
+//     {},
+//     {},
+//     {}
+// ]
