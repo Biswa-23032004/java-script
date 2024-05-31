@@ -1,4 +1,4 @@
-// control_flow to control the code not to exicute every tim.
+// control_flow to control the code not to exicute every time.
 
 const isUserLoggedIn = true
 const temperature = 42
