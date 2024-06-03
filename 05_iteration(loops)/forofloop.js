@@ -42,3 +42,13 @@ Each char is M
 Each char is E
 */
 
+// let try the object using  forof loop
+const myObject = {
+    'math1':"Algebra",
+    'math2':"Geometry"
+}
+
+for (const [key,value] of myObject) {
+    console.log(key,'-:',value);
+}
+// myObject is not iterable here objects are not iterable
