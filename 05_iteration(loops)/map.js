@@ -22,6 +22,7 @@ PC.set('keyboard',"Hp")
 console.log(PC);
 
 //  process of using loops in map method
+
 for (const [system, value] of PC) {
     console.log(system,'-:', value);
 }
