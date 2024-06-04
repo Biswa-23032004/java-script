@@ -7,8 +7,7 @@ let newObject = {
 }
 
 for (const key in newObject) {
-    console.log('${key} item avialble ${newObject[key]}');
-}   
+    console.log('${key} item available ${newObject[key]}')}  
 
 // try array in forin loop
 let grocery = ["rice","dal","besan","suji","sugar"]
