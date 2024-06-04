@@ -15,6 +15,7 @@ function resources(items) {
     console.log(items);    
 }
 // just giving reference of the function not to execute (resources()) the fun to print
+
 subjects.forEach(resources)
 /*
 Geography
