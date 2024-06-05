@@ -1,3 +1,5 @@
+// reduce() method
+
 const myNum = [1, 2, 3, 4, 5]
 
 const newNum = myNum.reduce(function (accumulator,currentvalue) {
