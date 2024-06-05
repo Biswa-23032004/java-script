@@ -18,4 +18,3 @@ console.log(newNums);
 
 let newNumbs = allNums.map( (num) => num * 10 ).map( (num) => num + 10 ).filter( (num) => num >= 40 )
 console.log(newNumbs);
-
