@@ -19,6 +19,8 @@
     div.style.padding = "10px"
     // div.innerText = "Hare Krishna"
     // it over write the  selected vallue from memory so not faster as directly set the value
+
+    // so the preferable way is to directbset the value by creattextnode.
     const addtext = document.createTextNode("Hare Krishna")
     div.appendChild(addtext)
 
