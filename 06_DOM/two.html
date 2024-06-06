@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Learning</title>
+</head>
+<body style="background-color: black; color: #fff;">
+    <div class="parent">
+        <div class="day">Sunday</div>
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent')
+    // console.log(parent);
+    // console.log(parent.children);
+    // html collection which is Array like property
+
+    // console.log(parent.children[1].innerHTML);
+    // when we acces the first element and represent the value
+    
+    //----------------------------------------------------------
+
+    // for loop also ren over the method which is looks like an array
+
+    // for (let i = 0; i < parent.children.length; i++) {
+    //     console.log(parent.children[i].innerHTML);
+        
+    // }
+
+    //----------------------------------------------------------
+    // when we move parent to child
+    parent.children[0].style.color = "blue"
+    // console.log(parent.firstElementChild);
+    // console.log(parent.lastElementChild);
+//--------------------------------------------------------
+    //and when move child to parent
+    const dayOne = document.querySelector('.day')
+    // console.log(dayOne);
+    // console.log(dayOne.parentElement);
+    // console.log(dayOne.nextElementSibling);
+
+    //NODE list
+    console.log("NODES: ",parent.childNodes);
+
+
+</script>
+</html>
