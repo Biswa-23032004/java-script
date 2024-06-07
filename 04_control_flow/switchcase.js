@@ -31,4 +31,5 @@ switch (month) {
     default:
         console.log("case not match");
         break;
+        
 }
