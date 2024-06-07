@@ -26,7 +26,7 @@ button.forEach(function (button) {
         //     case "grey":
         //     body.style.backgroundColor = event.target.id;
       
-        //     // We could have written the thebody.style.backgroundColor = grey;
+        //     // We could have written the body.style.backgroundColor = 'grey';
         //     // But writting in the above way makes the code more efficient and it is a good practice
         //     break;
       
