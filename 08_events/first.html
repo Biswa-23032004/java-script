@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+    // Notes:----------------------------------
+    // As we know javascript is a sequential running language. Every sequence is run after another sequence.
+
+    //some events happen on the browser which are evoked after any kind of activity.
+
+    //These activity is known as the events.
+
+    //The activity can be of many types as mouse hovering, mouse clicked, double clicked, keyboard's value clicked, drag and drop, etc.
+     
+
+    // let us target the <li> with the id of "owl".
+     
+    //  <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" onclick="alert('owl clicked')"></li>
+    
+    // 1st approach
+
+    //Writing onclick="" in an html tag itself  for a click event may not be a very good approach when the scale is large.
+    // It is not recommended
+
+    // 2nd approach 
+
+    //document.getElementById("owl").onclick = ()=> {
+     //   alert("owl is clicked")
+    //}
+    // This approach can also be accepted but the event listener features not only provides the click events but also different events.
+    // So this approach is also not recommended.
+
+    // 3rd or best approach 
+
+    // In this approach we have to target the id as always.
+    // and with event listener () we give the type of event and another parameter as false which is by default.
+   /*document.getElementById("owl").addEventListener("click", (e)=> {
+         alert("owl is clicked again")
+    },false)*/
+
+    //We also get an event object
+
+    document.getElementById("owl").addEventListener("click", (e)=> {
+        alert("owl is clicked again") 
+        console.log(e);},false)
+
+
+    // we need to study about these topic for js interview quries
+    
+    // type, timestamp, defaultprevented
+    // target, toElement, srcElement, currenttarget
+    // for interview prospective:
+    // client x,client y, screenX, screenY
+    // we can directly acces to those keys through the events
+    // altkey, ctrlkey, shiftkey, keyCode
+
+
+    // Event capturing
+
+    // inthis we clread about the event propagation and how to stop event propagation
+
+//-------------------------
+    // Bubbling : what ever script track the big element from insde oouter side is event propagation known as bubbling here
+    // ex:
+
+    document.getElementById("images").addEventListener("click", (e)=> {
+        console.log("Clicked inside the ul");
+    },false) 
+
+    //we can write it to with out false
+    /*
+    document.getElementById("image").addEventListener("click", (e)=> {
+        alert("Clicked inside the ul") 
+        console.log(e);
+    },)
+    */  // false is default value
+//-------------------------
+    document.getElementById("owl").addEventListener("click", (e)=> {
+        console.log("owl clicked ");
+    },false)
+    // but this is not a right way.
+    
+    // to stop bubbling we can use stopPropagation() method
+    document.getElementById("owl").addEventListener("click", (e)=> {
+        console.log("owl clicked ");
+        e.stopPropagation();
+    },false)
+
+//---------------------------------------
+    // capturing mode:
+
+    document.getElementById("images").addEventListener("click", (e)=> {
+        console.log("Clicked inside the ul");
+    },true)
+
+    document.getElementById("owl").addEventListener("click", (e)=> { 
+        console.log("owl clicked ");
+    },true)
+
+    // its depend on the use case we have what is iportant for us capturing or bubbling
+
+    // prevent default to change default behaviour
+    // we use .preventDefault() method
+// -----------------------------
+    document.getElementById("google").addEventListener("click", (e)=> {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log("google clicked ");
+    },false)
+//------------------------*0*----------------
+
+// Activities:
+// lets try with examples 
+// Ex: when we click on the image the imge will be disapper
+
+document.querySelector('#images').addEventListener('click',(e) => {
+    console.log(e.target.tagName);
+    if (e.target.tagName) {
+        console.log(e.target.id);
+        let removeIt = e.target.parentNode
+        removeIt.remove()
+    }
+})
+    // another process at right way also avoiding the disappering of whole parent of lists
+
+    //removeIt.parentNode.removeChild(removeit)
+
+
+
+</script>
+</html>
