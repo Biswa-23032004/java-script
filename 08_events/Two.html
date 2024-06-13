@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hare Krishna</h1>
+    <button type="button" id="stop">STOP</button>
+</body>
+<script>
+    const name = () => { 
+        console.log("surat");
+    }
+    const changeText = () => {
+        document.querySelector('h1').innerHTML = "Radhe Radhe"
+    }
+
+    const stopChange = setTimeout(changeText, 2000)
+    document.querySelector('#stop').addEventListener('click',() => {
+        clearTimeout(stopChange)
+        console.log("STOPPED");
+    })
+</script>
+</html>
