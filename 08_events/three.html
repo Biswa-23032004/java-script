@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hari Bol</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // setting third parameter string as str is "hi"
+    const sayDate = (str) => {
+        console.log(str,Date.now());
+    }
+    // time interval
+    const intervalId = setInterval(sayDate,1000,"hi")
+
+    // to stop interval
+    clearInterval(intervalId)
+
+    
+    
+
+</script>
+</html>

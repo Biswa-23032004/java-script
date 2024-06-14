@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // Assignment:
+
+    // start printing date and given string value while click the START buuton
+    // STOP printing date and given string value while click the STOP buuton
+
+    const sayHello = (str) => {
+        console.log(str,Date.now());
+    }
+
+    // we can store in this way
+    // const startmsg = document.querySelector('#start')
+    // const stopmsg = document.querySelector('#stop')
+
+
+    document.querySelector('#start').addEventListener('click', () => {
+        startMsg = setInterval(sayHello,1000,"Hare Krishna")
+       })
+    
+    document.querySelector('#stop').addEventListener('click', () => {
+        stopMsg = clearInterval(startMsg)
+       })
+</script>
+</html>
