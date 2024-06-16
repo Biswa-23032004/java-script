@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121 ;">
+    0	UNSENT	Client has been created. open() not called yet.
+1	OPENED	open() has been called.
+2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+3	LOADING	Downloading; responseText holds partial data.
+4	DONE	The operation is complete.
+</body>
+<script>
+    const requestUrl = 'https://api.github.com/users/Biswa-23032004'
+
+    // through this method we can send the data or reciev the data :
+    const xhr = new XMLHttpRequest()
+    // this is also a class so conver it to object using " new "
+
+    xhr.open('GET',requestUrl)
+    
+    //for continuesly tracking
+    xhr.onreadystatechange = () => {
+        console.log(xhr.readyState);
+
+        // can we detect the state: yes
+        if (xhr.readyState === 4) {
+        
+        //Now we can also access the properties of this API
+            
+            //Now to do that store the retrieved api in a variable
+            
+            // NOTE that every API or retrieved data comes up with a string
+            // So we need to convert that data into the object
+            // As we know the data of API is in a JSON format(like an object)
+            // now we will convert the retrieved data as string to the JSON format
+            // to do that we need to use this format
+
+        const data = JSON.parse(xhr.responseText)
+
+        // Now the Data is now converted as an object although a JSOn
+
+        // check the type of data for using as a object
+        console.log(typeof data);
+        console.log(data.followers);
+
+        }
+    }
+    
+    // call the open :
+    xhr.send();
+
+
+</script>
+</html>
