@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        
+    }
+.card{
+    background-color: #423f3f;
+    height:450px;
+    border-radius: 5px;
+    padding: 1rem;
+    width: 20rem;
+    position: absolute;
+    top: 15%;
+}
+
+.card:hover{
+
+}
+.card-img{
+    width: 100%;
+    height: 275px;
+    object-fit: cover;
+    border-top-left-radius: 1px;
+    border-top-right-radius: 1px;
+
+}
+
+.card-content {
+    padding: 1rem;
+}
+
+.card-title{
+    font-weight: bold;
+    margin-bottom: o.5 rem;
+}
+
+.card-text{
+    font-size: 0.875 rem;
+}
+
+.btn{
+    background-color: #007bff;
+    color: #fff;
+    padding:0.5rem 1rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+</style>
+<body style="background-color: #212121; color: #fff;">
+    <div class="card">
+        <img src="" class="card-img">
+        <div class="card-content">
+            <h4 class="card-title"></h4>
+            <p class="paragraph"></p>
+            <p class="paragraph2"></p>
+            <a href="#" class="btn">Show Profile</a>
+
+        </div>
+    </div>
+    
+</body>
+<script>
+    const image = document.querySelector('.card-img');
+    const userName = document.querySelector('.card-title');
+    const followers = document.querySelector('.paragraph');
+    const following = document.querySelector('.paragraph2');
+    const button = document.querySelector('.btn');
+    const xhr = new XMLHttpRequest();
+    const reqApi = "https://api.github.com/users/Biswa-23032004"
+
+    xhr.open('GET',reqApi)
+
+    button.addEventListener('click',(e) => {
+        xhr.onreadystatechange = () => {
+
+            const data = xhr.responseText
+            //console.log(typeof data);
+            // console.log(data);
+
+            const jsonData = json.parse(data);
+            // console.log(jsonData);
+            // console.log(typeof jsonData);
+            // console.log(jsonData.followers);
+
+            img.src = "09_advance_one\asset\high-quality-iphone-hanuman-wallpaper-download.jpg"
+            userName.textContent = 'Username : ${jsonData.login}'
+            followers.textContent = 'Followers : ${jsonData.followers}'
+            following.textContent = 'Following : ${jsonData.following}'
+        }
+    })
+
+</script>
+</html>
