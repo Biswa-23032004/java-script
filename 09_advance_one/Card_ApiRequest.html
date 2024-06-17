@@ -58,7 +58,7 @@
 </style>
 <body style="background-color: #212121; color: #fff;">
     <div class="card">
-        <img src="" class="card-img">
+        <img src=" " class="card-img">
         <div class="card-content">
             <h4 class="card-title"></h4>
             <p class="paragraph"></p>
@@ -83,19 +83,20 @@
     button.addEventListener('click',(e) => {
         xhr.onreadystatechange = () => {
 
-            const data = xhr.responseText
+            const data = xhr.responseText;
             //console.log(typeof data);
             // console.log(data);
 
-            const jsonData = json.parse(data);
+            const jsonData = JSON.parse(data);
             // console.log(jsonData);
             // console.log(typeof jsonData);
             // console.log(jsonData.followers);
 
-            img.src = "09_advance_one\asset\high-quality-iphone-hanuman-wallpaper-download.jpg"
-            userName.textContent = 'Username : ${jsonData.login}'
-            followers.textContent = 'Followers : ${jsonData.followers}'
-            following.textContent = 'Following : ${jsonData.following}'
+            image.src = "https://avatars.githubusercontent.com/u/126501097?v=4";
+            userName.textContent = `Username: ${jsonData.login}`;
+            followers.textContent = `Followers: ${jsonData.followers}`;
+            following.textContent = `Following: ${jsonData.following}`;
+            
         }
     })
 
