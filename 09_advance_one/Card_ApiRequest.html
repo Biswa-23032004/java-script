@@ -78,9 +78,9 @@
     const following = document.querySelector('.paragraph2');
     const button = document.querySelector('.btn');
     const xhr = new XMLHttpRequest();
-    const reqApi = "https://api.github.com/users/Biswa-23032004"
+    const reqUrl = "https://api.github.com/users/Biswa-23032004"
 
-    xhr.open('GET',reqApi)
+    xhr.open('GET',reqUrl)
 
     button.addEventListener('click',(e) => {
         xhr.onreadystatechange = () => {
@@ -100,7 +100,9 @@
             following.textContent = `Following: ${jsonData.following}`;
             
         }
+        xhr.send()
     })
+    
 
 </script>
 </html> 
