@@ -119,8 +119,93 @@ Sagar has a Lava Phone
 // Ex :- 5
 
 new Promise((resolve,reject) =>{
-let 
+let errorone = true
+if (!errorone) {
+    resolve({userName : "Rahul" , age : 22})    
+} else {
+    reject('ERROR: Something went wrong')
+}
+}).then((err) => {
+    console.log(err);
+    return err.userName
+}).then((newUser) => {      // So here if we use the return keyword then it will store the return value. For that, we have to create another then() like chaining way. Like this way
+    console.log(newUser);
+}).catch((err2) => {
+    console.log(err2);
+}).finally(() => console.log("The promise is either resolved or rejected"))
+// The code in the finally() defines the end message irrespective of the results.
+
+/*
+ERROR: Something went wrong
+The promise is either resolved or rejected
+*/
+// The catch() method provides a callback.
+
+// The callback is a function to run when a promise is rejected.
+
+//check while false value
+new Promise((resolve,reject) =>{
+    let errorone = false
+    if (!errorone) {
+        resolve({userName : "Rahul" , age : 22})    
+    } else {
+        reject('ERROR: Something went wrong')
+    }
+    }).then((err) => {
+        console.log(err);
+        return err.userName
+    }).then((newUser) => {
+        console.log(newUser);
+    }).catch((err2) => {
+        console.log(err2);
+    }).finally(() => console.log("The promise is either resolved or rejected"))
+    // The code in the finally() defines the end message irrespective of the results.
+
+    /*
+    Rahul
+    The promise is either resolved or rejected
+    */
+
+    
+// There is another way to execute the program with async and await methods
+
+// specially it prefer async awaits while dtdbase connection.
+
+// But it does not have the catch() or similar type of method where it can catch the error
+
+// Once the response is there the code will be executed
+
+// "async and await make promises easier to write"
+
+// "async" makes a function return a Promise
+
+// "await" makes a function wait for a Promise
+
+const promiseTwo = new Promise((resolve,reject) => {
+    let error = true
+if (!error) {
+    resolve({userName : "Rahul" , password : "1234"})    
+} else {
+    reject('ERROR: Javascript went wrong')
+}
 })
+
+async function consumepromiseTwo() {
+    try {
+        const response = await promiseTwo
+        console.log(response);  
+    } catch (error) {
+        console.log(error);
+        // gracefully error handel from rejection value
+    }
+}
+consumepromiseTwo()
+/*
+ERROR: Javascript went wrong
+*/
+
+
+
 
 
 
