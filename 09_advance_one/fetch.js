@@ -70,4 +70,5 @@ fetch("https://api.github.com/users/Biswa-23032004")
 // If The reason is function wait  1 second for promise 
 // But it is lastly writen while the previous code is exicuted in that time in serialwise
 
+
 // it return the json object
