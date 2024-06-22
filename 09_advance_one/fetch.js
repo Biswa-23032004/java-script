@@ -4,6 +4,8 @@
 
 // It provides a more efficient and powerful way to retrieve data from servers compared to older techniques, such as the XMLHTTPRequest()
 
+// Fetch is also known for hiding the details of the program
+
 // The request can be of any type of API that returns the data in JSON or XML.
 
 // Example
