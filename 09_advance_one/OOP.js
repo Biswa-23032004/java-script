@@ -77,4 +77,6 @@ console.log(userThree.constructor);
 
 // the constructor property is the reference of userTwo
 
+console.log(userFour instanceof usertwo);// true
+
 
