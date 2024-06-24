@@ -19,6 +19,10 @@
 
 // The class has two initial properties: "name" and "year".
 
+// A JavaScript class is not an object.
+
+// It is a template for JavaScript objects.
+
 // When you have a class, you can use the class to create objects:
 
 // Example:
