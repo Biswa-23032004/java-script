@@ -12,8 +12,8 @@ class User {
     }
 
      static hello() {
-        console.log('Hello ${this.username}');
-    }
+        console.log(`Hello ${this.username}`);
+        }
 }
 
 const hars = new User("Hars")
