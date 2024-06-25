@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+</head>
+<body>
+
+    <!-- The bind() method solves this problem.
+
+     In the following example, the bind() method is used to bind the this of constructor. to print this.server of constructer while thr button is clicked
+        -->
+    <button>Button Clicked</button>
+</body>
+<script>
+    class React {
+        constructor(){
+            this.library = "React"
+            this.server = "https://localhost:303"
+
+            // Requirment:
+            // when the page is Load inthat time a object is created
+            //and we have the reference of this button set with a handelClick () method that print the msg whatever as form submit or somthing else.
+
+            document
+            .querySelector('button')
+            .addEventListener('click',this.handleClick.bind(this))
+
+
+        }
+        handleClick(){
+            console.log("button clicked");
+            console.log(this.server);
+        }
+    }
+
+    const app = new React()
+
+
+
+
+</script>
+</html>
